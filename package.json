@@ -1,0 +1,29 @@
+{
+  "name": "orm_sequelize_auth_jwt_express_mysql-1",
+  "version": "1.0.0",
+  "description": "- Object–Relational Mapping: Intermediario entre express y mysql que nos añade una capa de seguridad y fácil manejo de consultas cuabdo el proyecto es grande. Existen ORM para diferentes lenguajes\r [sequelize](https://sequelize.org/)",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IFCD0022-CIFO-Violeta-2025/orm_sequelize_auth_jwt_express_mysql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IFCD0022-CIFO-Violeta-2025/orm_sequelize_auth_jwt_express_mysql/issues"
+  },
+  "homepage": "https://github.com/IFCD0022-CIFO-Violeta-2025/orm_sequelize_auth_jwt_express_mysql#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.15.3",
+    "nodemailer": "^7.0.10",
+    "sequelize": "^6.37.7",
+    "uuid": "^13.0.0"
+  }
+}
