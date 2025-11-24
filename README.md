@@ -1,4 +1,6 @@
-# ORM sequelize y auth con JWT
+## Auth con Context y cookie en React, y Node Express Node MySQL con ORM en backend
+
+## ORM sequelize y auth con JWT
 
 - Object–Relational Mapping: Intermediario entre express y mysql que nos añade una capa de seguridad y fácil manejo de consultas cuabdo el proyecto es grande. Existen ORM para diferentes lenguajes
 [sequelize](https://sequelize.org/)
