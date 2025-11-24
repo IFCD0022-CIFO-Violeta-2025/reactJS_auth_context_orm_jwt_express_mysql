@@ -19,6 +19,7 @@
   "homepage": "https://github.com/IFCD0022-CIFO-Violeta-2025/orm_sequelize_auth_jwt_express_mysql#readme",
   "dependencies": {
     "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.15.3",
