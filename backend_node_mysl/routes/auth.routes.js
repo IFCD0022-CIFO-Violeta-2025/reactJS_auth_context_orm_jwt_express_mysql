@@ -5,11 +5,13 @@ const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const { UserModel } = require("../models/user.model");
-const authMiddleware = require("../middlewares/auth.middleware")
+const authMiddleware = require("../middlewares/auth.middleware");
+const {sendMailTo} = require("../utils/nodemailer");
 
 router.post("/auth/signup", async (req, res) => {
     try {
-        const isUser = await UserModel.findOne({ where: { email: req.body.email }});
+        const email =  req.body.email;
+        const isUser = await UserModel.findOne({ where: { email }});
         if (isUser)  return res.status(400).json({ message: "Users exists!"})
         const user = await UserModel.create({
             id: uuidv4(),
@@ -17,6 +19,10 @@ router.post("/auth/signup", async (req, res) => {
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, bcryptjs.genSaltSync(10))
         });
+        const html = `
+            <h1>User Created!</h1>
+        `;
+        await sendMailTo("cifovioleta5@gmail.com", email, "User Created!",  html);
         res.status(201).json({ message: "Users created!", user })
     } catch (error) {
         console.error(error);

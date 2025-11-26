@@ -4,7 +4,7 @@ const UserContext = createContext();
 
 // Helpers para cookies
 const setCookie = (name, value, days = 1) => {
-  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  const expires = new Date(Date.now() + days * 864e5).toUTCString(); 
   document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Strict`;
 };
 
